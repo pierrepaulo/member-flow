@@ -39,6 +39,8 @@ model Category {
 model Member {
   id         String        @id @default(cuid())
   fullName   String
+  email      String?
+  phone      String?
   status     MemberStatus  @default(ACTIVE)
   category   Category      @relation(fields: [categoryId], references: [id], onDelete: Restrict)
   categoryId String

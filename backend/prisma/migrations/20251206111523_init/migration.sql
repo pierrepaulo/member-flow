@@ -32,6 +32,8 @@ CREATE TABLE "Category" (
 CREATE TABLE "Member" (
     "id" TEXT NOT NULL,
     "fullName" TEXT NOT NULL,
+    "email" TEXT,
+    "phone" TEXT,
     "status" "MemberStatus" NOT NULL DEFAULT 'ACTIVE',
     "categoryId" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
